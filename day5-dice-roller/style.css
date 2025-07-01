@@ -1,0 +1,36 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 200px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+
+img.roll {
+  transform: rotate(15deg) scale(1.1);
+}
