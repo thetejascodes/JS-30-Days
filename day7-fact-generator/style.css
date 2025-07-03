@@ -1,0 +1,30 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.quote-box {
+  background: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #555;
+}
