@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="main-section">
+    <h1>✅ My Tasks Today</h1>
+
+    <div id="add-todo">
+      <select id="priority">
+        <option value="Low">🟩 Low</option>
+        <option value="Medium">🟨 Medium</option>
+        <option value="High">🟥 High</option>
+      </select>
+      <input type="date" id="due-date" />
+      <input type="text" id="new-todo" placeholder="Add new task here..." />
+      <button id="add-todo-button">➕</button>
+    </div>
+
+    <div id="filters">
+      <label><input type="radio" name="filter" value="All" checked /> All</label>
+      <label><input type="radio" name="filter" value="Active" /> Active</label>
+      <label><input type="radio" name="filter" value="Completed" /> Completed</label>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div id="counter">
+      
+    </div>
+
+    <div id="other-buttons">
+      <button id="dark-mode-toggle">Dark Mode</button>
+      <button id="clear-all">Clear All</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Please enter a todo item</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

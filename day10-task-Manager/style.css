@@ -1,0 +1,305 @@
+:root {
+  --bg: #f4f6f9;
+  --text: #2c3e50;
+  --card: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --primary: #3498db;
+  --danger: #e74c3c;
+  --success: #2ecc71;
+  --warning: #f1c40f;
+  --hover: #ddd;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#main-section {
+  background-color: var(--card);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px var(--shadow);
+  width: 100%;
+  max-width: 650px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Add Todo Inputs */
+#add-todo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+#add-todo select,
+#add-todo input[type="date"],
+#add-todo input[type="text"] {
+  padding: 0.6rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+  background-color: var(--card);
+  color: var(--text);
+}
+
+#add-todo input[type="text"] {
+  flex: 2;
+}
+
+#add-todo button {
+  padding: 0.6rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#add-todo button:hover {
+  background-color: #2980b9;
+}
+
+/* Filter buttons */
+#filters {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+#filters input[type="radio"] {
+  margin-right: 6px;
+  accent-color: var(--primary);
+}
+
+/* Todo List Styling */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#todo-list li {
+  background-color: #f9f9f9;
+  border-left: 8px solid #ccc;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--card);
+  color: var(--text);
+}
+
+/* Priority Colors */
+#todo-list li[data-priority="High"] {
+  border-left-color: var(--danger);
+}
+#todo-list li[data-priority="Medium"] {
+  border-left-color: var(--warning);
+}
+#todo-list li[data-priority="Low"] {
+  border-left-color: var(--success);
+}
+
+/* Buttons beside task */
+.task-buttons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.task-buttons button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.edit-btn {
+  background-color: #ffeaa7;
+}
+.edit-btn:hover {
+  background-color: #fdcb6e;
+}
+
+.delete-btn {
+  background-color: #fab1a0;
+}
+.delete-btn:hover {
+  background-color: #e17055;
+}
+
+/* Checkbox custom */
+.custom-checkbox input {
+  display: none;
+}
+.custom-checkbox .checkmark {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  position: relative;
+  margin-right: 10px;
+}
+.custom-checkbox input:checked + .checkmark::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.custom-checkbox input:checked + .checkmark {
+  background-color: var(--success);
+}
+
+/* Due Date */
+.due-date {
+  font-size: 14px;
+}
+
+.isDueDateOver {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+/* Done styling */
+.done {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Task Counter */
+#counter {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Other buttons section */
+#other-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+#other-buttons button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #dcdde1;
+  font-weight: 600;
+  cursor: pointer;
+}
+#other-buttons button:nth-child(2) {
+  background-color: var(--danger);
+  color: white;
+}
+
+/* Toast styling */
+.toast {
+  visibility: hidden;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+  bottom: 50px;
+}
+
+/* Edit input */
+#edit-todo {
+  padding: 0.6rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+  width: 70%;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: border 0.3s;
+  background-color: var(--card);
+  color: var(--text);
+}
+#edit-todo:focus {
+  border-color: var(--primary);
+}
+
+#save-todo-button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--success);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#save-todo-button:hover {
+  background-color: #27ae60;
+  transform: scale(1.05);
+}
+
+/* Dark mode support */
+body.dark {
+  --bg: #1e272e;
+  --text: #f5f6fa;
+  --card: #2f3640;
+  --shadow: rgba(255, 255, 255, 0.05);
+  --hover: #444;
+  --danger: #e74c3c;
+  --primary: #74b9ff;
+  --success: #00cec9;
+  --warning: #fab005;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #add-todo {
+    flex-direction: column;
+  }
+
+  #other-buttons {
+    flex-direction: column;
+  }
+
+  #todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-buttons {
+    align-self: flex-end;
+  }
+}
