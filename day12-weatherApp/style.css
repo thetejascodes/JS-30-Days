@@ -1,0 +1,72 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.weather-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+  margin-top: 20px;
+  display: none;
+}
+
+.dark .weather-card {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.loading {
+  margin-top: 20px;
+  display: none;
+}
+
+.toggle {
+  margin-top: 20px;
+  cursor: pointer;
+}
