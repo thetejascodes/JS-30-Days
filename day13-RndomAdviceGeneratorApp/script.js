@@ -1,6 +1,6 @@
 const adviceButton = document.getElementById("getAdviceButton");
 const result = document.getElementById('result');
-const loader = document.getElementById('loading')
+const loader = document.getElementById('loading');
 const toggle = document.getElementById("modeToggle");
 const getAdvice = async ()=>{
     result.innerHTML = "";
@@ -12,6 +12,8 @@ const getAdvice = async ()=>{
         }
         const data = await response.json();
         console.log(data.slip.advice)
+
+        
         result.innerHTML = `<p>${data.slip.advice}</p>`
         loader.style.display = "none";
 

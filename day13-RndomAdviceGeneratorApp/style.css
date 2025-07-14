@@ -79,7 +79,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Loader */
+
 .loader {
   border: 6px solid rgba(255, 255, 255, 0.2);
   border-top: 6px solid var(--loader-color);
@@ -100,7 +100,7 @@ body {
   }
 }
 
-/* Dark Mode Toggle Switch */
+
 .switch {
   position: absolute;
   top: 20px;
