@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #f7f7f7;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px;
+}
+
+#message {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+#attempts {
+  color: gray;
+}
