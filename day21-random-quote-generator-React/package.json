@@ -2,7 +2,6 @@
   "name": "day21-random-quote-generator-react",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://thetejascodes.github.io/JS-30-Days/day21-random-quote-generator-React",
   "type": "module",
   "scripts": {
     "dev": "vite",
