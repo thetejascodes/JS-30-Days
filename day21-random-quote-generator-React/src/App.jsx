@@ -8,6 +8,7 @@ const App = () => {
     "Your time is limited, don't waste it living someone else's life.",
     "Push yourself, because no one else is going to do it for you.",
   ];
+  console.log("hello");
   const [quote,setQuote] = useState("Get Random Quote");
   const getQuote = ()=>{
      const randomNumber = Math.floor(Math.random()*quotes.length);
