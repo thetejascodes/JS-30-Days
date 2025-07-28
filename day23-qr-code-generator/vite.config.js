@@ -1,11 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/JS-30-Days/day23-qr-code-generator/', 
   plugins: [react()],
-    base: '/JS-30-Days/day22-counter-app/',  
-    build: {
-    outDir: 'dist',
-  },
 })
