@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+h1 { color: #00ffcc; }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px 0;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border: 2px solid #00ffcc;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.square:hover { background: #444; }
+.reset {
+  background: #00ffcc;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.reset:hover { background: #00ffaa; }
